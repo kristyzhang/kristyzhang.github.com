@@ -1,0 +1,722 @@
+/*************************************************
+**************************************************
+
+Website Name: 5th Avenue
+Website URL: borderxlab.com
+Website Author: Aaron Cheng
+Author URL: chengfolio.com
+Copyright 2014. All Rights Reserved.
+
+Color Guide
+***************
+F6F6F6 - Light Gray
+808a97 - Blue Gray(For text)
+1377CC - Blue
+
+*************************************************/
+
+/************************************************
+*************************************************
+0. CSS Reset -------------------- All Files
+1. General Styles ---------------------- All Files
+2. Banner Styles -------------------- All Files
+3. Body Styles ---------------------- All Files
+
+*************************************************
+************************************************/
+
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+body  {
+  font-family: "Open Sans", Microsoft YaHei, Helvetica, Arial, sans-serif, STHeiti;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  color: #808a97;
+}
+
+p {
+  margin: 0;
+}
+
+ol{
+	padding:0;
+}
+
+ul li{
+	list-style-type: none;
+	padding:0;
+}
+
+
+ol li{
+	list-style-type: decimal;
+	padding:0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Open Sans", Microsoft YaHei, Helvetica, Arial, sans-serif, STHeiti;
+	font-weight:300;
+	font-size: 14px;
+	margin: 0;
+}
+
+a{
+	color: #808a97;
+}
+
+a:hover, a:focus{
+	color: #808a97;
+	text-decoration: none;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+1. Text Styles
+------------------------------------------------
+----------------------------------------------*/
+.txt--highlight{
+	color: #0093CD;
+}
+
+.txt--bold{
+	font-weight: bold;
+}
+
+.txt--bullet_list{
+	list-style-type: disc;
+	list-style-position:outside;
+}
+
+.txt--bullet_list > li{
+	list-style-type: disc;
+	list-style-position:outside;
+}
+
+.txt--number_list{
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
+.txt--number_list > li{
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
+.txt--xl{
+	font-size: 24px;
+	line-height: 36px;
+}
+
+.txt--lg{
+	font-size: 18px;
+	line-height: 36px;
+}
+
+.txt--md{
+	font-size: 15px;
+}
+
+.txt--sm{
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.txt--title{
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 300;
+	color: #000;
+	text-align: center;
+}
+
+.txt--primary_on_dark{
+	color: #FFF;
+}
+
+.txt--primary_on_light{
+	color: #3E3E3E;
+}
+
+.circle--number {
+background-color: #3E3E3E;
+width: 28px;
+height: 28px;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-khtml-border-radius: 50%;
+border-radius: 50%;
+font-size: 18px;
+color: #fff;
+text-align: center;
+line-height: 28px;
+}
+/*----------------------------------------------
+------------------------------------------------
+2. Image Styles
+------------------------------------------------
+----------------------------------------------*/
+.img--full_width{
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*----------------------------------------------
+------------------------------------------------
+3. Shape Styles
+------------------------------------------------
+----------------------------------------------*/
+.box{
+	display: block;
+}
+
+.box--primary{
+	background-color: #000;
+}
+
+.box--secondary{
+	background-color: #F6F6F6;
+}
+
+.box--under_hero{
+	position: relative;
+	top: -60px;
+	margin-bottom: -40px;
+}
+
+.box--full_width{
+	width: 100%;
+}
+
+.box--primary-bar{
+	background-color: #F6F6F6;
+	height: 60px;	
+}
+
+.box--share-wechat{
+	background-color: #323232;
+	height: 60px;	
+}
+
+.box--share-curation{
+	background-color: #F8F8F8;
+	height: 60px;	
+}
+
+.divider--horizontal{
+	border-bottom: 1px solid #808a97;
+	border-left: 26px transparent solid;
+	border-right: 26px transparent solid;
+	border-top-width: 0;
+	width: 100%;
+}
+
+.divider--horizontal_even{
+	height: 2px;
+}
+
+.divider--horizontal_even_thin{
+	height: 1px;
+	background-color: #B9BBC5;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+4. Spacing Styles
+------------------------------------------------
+----------------------------------------------*/
+.margin--section_top{
+	margin-top: 120px;
+}
+
+.margin--section_bottom{
+	margin-bottom: 120px;
+}
+
+.margin--element_top_lg{
+	margin-top: 120px;
+}
+
+.margin--element_top{
+	margin-top: 70px;
+}
+
+.margin--element_top_sm{
+	margin-top: 40px;
+}
+
+.margin--element_top_xs{
+	margin-top: 20px;
+}
+
+.margin--element_top_xxs{
+	margin-top: 10px;
+}
+
+.margin--element_bottom_lg{
+	margin-bottom: 120px;
+}
+
+.margin--element_bottom{
+	margin-bottom: 70px;
+}
+
+.margin--element_bottom_sm{
+	margin-bottom: 40px;
+}
+
+.margin--element_bottom_xs{
+	margin-bottom: 20px;	
+/*	margin: 0px 10px 20px 5px;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);*/
+}
+
+.margin--element_left_xs{
+	margin-left: 10px;
+}
+
+.padding--element_lg{
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.padding--element_md{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.padding--element_sm{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.padding--element_xs{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.padding--txt_box{
+	padding: 40px;
+}
+
+.shift--up_xl{
+	position: relative;
+	top: -280px;
+}
+
+.shift--up_lg{
+	position: relative;
+	top: -120px;
+}
+
+.shift--up{
+	position: relative;
+	top: -80px;
+}
+
+.move--up_xl{
+	margin-top: -180px;
+}
+
+.move--up_lg{
+	margin-top: -120px;
+}
+
+.move--up{
+	margin-top: -70px;
+}
+/*----------------------------------------------
+------------------------------------------------
+5. Button Styles
+------------------------------------------------
+----------------------------------------------*/
+.btn{
+	border-width: 0;
+	display: block;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.btn--primary{
+	width: 100%;
+	color: #fff;
+	background-color: #1377CC;
+	height: 30px;
+	line-height: 30px;
+}
+
+.btn--primary-white{
+	background-color: #fff;
+	color:#000;
+}
+
+.btn__menu_expand{
+	margin-top: 13px;
+}
+
+.btn:hover, .btn:focus{
+	color:#fff;
+	opacity: 0.8;
+}
+
+.btn--lg{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+}
+/*----------------------------------------------
+------------------------------------------------
+6. Nav/Footer Styles
+------------------------------------------------
+----------------------------------------------*/
+nav {
+	background-color: #F6F6F6;
+	height: 60px;
+}
+
+.nav__txt{
+	font-size: 16px;
+	color: #000;
+	line-height: 30px;
+}
+
+.nav__menu{
+	margin-top: 10px;
+}
+
+.nav__menu--mobile{
+	margin-top: 40px;
+	display: none;
+}
+
+.primary-bar--line-height{
+	line-height: 60px;
+}
+
+.primary-bar__btn{
+	margin-top: 15px;
+}
+
+.primary-bar__logo{
+	margin-top: 5px;
+}
+
+
+.share-page__logo{
+/*	margin-top: 120px;*/
+}
+
+.primary-bar--web-name{
+	margin-left: 10px;
+	font-size: 16px;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/*----------------------------------------------
+------------------------------------------------
+7. Share Page Styles
+------------------------------------------------
+----------------------------------------------*/
+.wechat__product_info{
+	position: fixed;
+	bottom: 80px;
+}
+
+.share__main_pic{
+	width: 100%;
+
+}
+
+.btn--share-wechat{
+	margin-top: 12px;
+	background-color: #1377CC;
+	color:#FFF;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+/*----------------------------------------------
+------------------------------------------------
+8. shopping cart Styles
+------------------------------------------------
+----------------------------------------------*/
+.name--merchant{
+	position: absolute;
+}
+
+.img--product{
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+9. faq Styles
+------------------------------------------------
+----------------------------------------------*/
+.faq__btn_back{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+
+.faq__btn_back img{
+	width: 50px;
+	height: 50px;
+}
+/*----------------------------------------------
+------------------------------------------------
+10. curation
+------------------------------------------------
+----------------------------------------------*/
+.curation_home__info{
+	margin-top: 5px;
+}
+
+.curation_home__share{
+	margin-top: 3px;
+}
+
+.icon--share{
+	width: 17px;
+	height:14px;
+}
+
+
+.curation_home__icon_share_label{
+	margin-right: 8px;
+	margin-top: -2px;
+}
+
+.curation__brand_name{
+	line-height: 18px;
+/*	color: #000;*/
+	font-size: 14px;
+}
+
+.curation__product_name{
+	line-height: 18px;
+	color: #3E3E3E;
+	font-size: 14px;
+}
+
+.img--cover{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img--contain{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.curation__btn--detail_wrapper{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.curation__btn--detail{
+	border-width: 0;
+	display: block;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	background-color: #3E3E3E;
+	height: 30px;
+	line-height: 30px;
+	width: 50%;
+	float: left;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.curation__btn--detail_next_title{
+	border-width: 0;
+	display: block;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	background-color: #3E3E3E;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	float: right;
+	position: relative;
+	top: -7px;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.curation__btn--primary{
+	border-width: 0;
+	display: block;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	background-color: #3E3E3E;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	float: left;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.curation_post__icon_share{
+	width: 17px;
+	height:14px;
+	margin-top: 10px;
+	margin-right: -15px;
+}
+
+.curation_post__share_label--hero{
+	margin-top: -2px;
+	margin-right:8px;
+}
+
+.curation_post__share_label--detail{
+	margin-top: 8px;
+	margin-right:8px;
+}
+
+.curation_post__icon_share--discount{
+	width: 17px;
+	height:14px;
+}
+
+.btn--download{
+	margin-top: 12px;
+	background-color: #3E3E3E;
+	color:#fff;
+	height: 35px;
+	line-height: 35px;
+	font-size: 15px;
+}
+
+.curation__logo-share{
+	margin-top: 12px;
+	width: 35px;
+	height: 35px;
+}
+
+.curation_post__hero{
+	width: 100%;
+	height: 250px;
+}
+
+.curation_post__product{
+	width: 100%;
+	height: 160px;
+}
+
+.inapp_display{
+	display: none;
+}
+
+.padding--gift_list{
+	padding-left: 32px;
+}
+
+.waterfall__price{
+	position: relative;
+	right: -10px;
+}
+
+.waterfall__discount{
+	position: relative;
+	left: -10px;
+}
+
+.curation__date{
+	background-color: #3E3E3E;
+	color: #FFF;
+	margin-right: 10px;
+	padding-right: 3px;
+	padding-left: 3px;
+}
+
+.home__img_wrapper{
+	position: relative;
+}
+
+.icon_arrow{
+	position: absolute;
+	bottom: 0;
+	left: 14%;
+	width: 6%;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+11. tutorial
+------------------------------------------------
+----------------------------------------------*/
+.tutorial_shipping__title{
+	margin-top: 5px;
+	color: #3E3E3E;
+	margin-left: 15px;
+}
+/*----------------------------------------------
+------------------------------------------------
+11. size chart
+------------------------------------------------
+----------------------------------------------*/
+.chart__title{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#toast-container > div {
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 6px;
+	padding: 5px 0px 5px 50px;
+	width: 150px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	background-position: 15px center;
+	background-repeat: no-repeat;
+	-moz-box-shadow: 0 0 12px #999999;
+	-webkit-box-shadow: 0 0 12px #999999;
+	box-shadow: 0 0 12px #999999;
+	color: #ffffff;
+	opacity: 0.8;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	filter: alpha(opacity=80);
+	background-color: grey;
+}

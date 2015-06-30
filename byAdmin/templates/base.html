@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>【别样】人气页面管理端</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ static_url("admin/css/bootstrap.min.css") }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ static_url("admin/css/sb-admin.css") }}" rel="stylesheet">
+
+    <!-- Bieyang CSS -->
+    <link href="{{ static_url("admin/css/bieyang.css") }}" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="{{ static_url("admin/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap switch -->
+    <link href="{{ static_url("admin/css/bootstrap-switch.css") }}" rel="stylesheet">
+    <style>
+        body.dragging, body.dragging * {
+        cursor: move !important;
+        }
+
+        .dragged {
+        position: absolute;
+        opacity: 0.5;
+        z-index: 2000;
+        border-style: solid;
+        border-width: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    {% block body %}{% end %}
+
+    <!-- jQuery -->
+    <script src="{{ static_url("admin/js/jquery.js") }}"></script>
+    <script src="{{ static_url("admin/js/bootstrap-switch.js") }}"></script>
+    <script src="{{ static_url("admin/js/jquery-sortable.js") }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ static_url("admin/js/bootstrap.min.js") }}"></script>
+
+    <script>
+    // bootstrap switch
+        $('input[name="my-checkbox"]').bootstrapSwitch('state', true, true);
+    </script>
+
+
+    <script>
+
+    // Sortable rows
+    $('#sortable').sortable({
+      containerSelector: 'table',
+      itemPath: '> tbody',
+      itemSelector: 'tr',
+      placeholder: '<tr class="placeholder"/>',
+      onDrop: function ($item, container, _super) {
+           var sorted = [];
+           $('tr').each(function () {
+               sorted.push($(this).data('id'));
+           });
+           sorted.shift();
+           $('#ordered_items').val(sorted.join(","));
+           _super($item);
+           }
+    });
+    </script>
+
+</body>
+
+</html>

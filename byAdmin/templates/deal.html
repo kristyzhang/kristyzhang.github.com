@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div id="wrapper">
+    {% module NaviModule('deal') %}
+    <div id="page-wrapper">
+
+            <div class="container-fluid margin--element_top_xs">
+                {% if 'id' in deal %}
+                <form action="/deal/{{ deal['id'] }}" role="form" method="post" enctype="multipart/form-data">
+                {% else %}
+                <form action="/deal/" role="form" method="post" enctype="multipart/form-data">
+                {% end %}
+
+                    <div class="row">
+                        <div class="col-sm-8 col-md-9 col-lg-10">
+                             <!--<p class="txt&#45;&#45;lg" id="msg&#45;&#45;post_success">The post is successfully submitted!</p> -->
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 ">
+                            <input type="submit" class="btn btn-default btn--primary" id="submit" value="Submit">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h1>Curation info</h1>
+
+                                <div class="form-group margin--element_top_xs">
+                                    <label>Date:</label>
+                                {% if 'date' in deal %}
+                                    <input class="form-control" name="date" id="date" placeholder="MM/DD" value="{{ deal['date'] }}">
+                                {% else %}
+                                    <input class="form-control" name="date" id="date" placeholder="MM/DD">
+                                {% end %}
+
+                                </div>
+
+                                <div class="form-group margin--element_top_xs">
+                                    <label>Title:</label>
+                                {% if 'date' in deal %}
+                                    <input class="form-control" name="title" id="title" placeholder="Fresh 馥蕾诗买赠礼包" value="{{ deal['title'] }}">
+                                {% else %}
+                                    <input class="form-control" name="title" id="title" placeholder="Fresh 馥蕾诗买赠礼包">
+                                {% end %}
+
+                                </div>
+
+                                <div class="form-group margin--element_top_xs">
+                                    <label>Is This Expired?</label>
+                                    <div class="radio">
+                                        <label>
+                                        {% if 'expire' in deal and deal['expire'] == '1' %}
+                                            <input type="radio" name="expire" id="no" value="0">Active
+                                        {% else %}
+                                            <input type="radio" name="expire" id="no" value="0" checked>Active
+                                        {% end %}
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                        {% if 'expire' in deal and deal['expire'] == '1' %}
+                                            <input type="radio" name="expire" id="yes" value="1" checked>Expired
+                                        {% else %}
+                                            <input type="radio" name="expire" id="yes" value="1">Expired
+                                        {% end %}
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group margin--element_top_xs">
+                                    <label>Upload Image</label>
+                                    <input type="file" name="image" id="image">
+                                </div>
+
+                                <div class="form-group margin--element_top">
+                                    <label>Custom Curation Page Link:(Optional)</label>
+                                    {% if 'custom_url' in deal %}
+                                        <input class="form-control" name="custom_url" id="custom_url" placeholder="150609_peekaboo.html" value="{{ deal['custom_url'] }}">
+                                    {% else %}
+                                        <input class="form-control" name="custom_url" id="custom_url" placeholder="150609_peekaboo.html">
+                                    {% end %}
+                                </div>
+
+                                <div class="form-group margin--element_top_xs">
+                                    <label>Discount Code:(Optional)</label>
+                                    <p class="help-block">Fill '无需优惠码', if no promotion code is required.</p>
+                                    {% if 'discCode' in deal %}
+                                        <input class="form-control" name="discCode" id="discCode" placeholder="MULTI" value="{{ deal['discCode'] }}">
+                                    {% else %}
+                                        <input class="form-control" id="discCode" name="discCode" placeholder="MULTI">
+                                    {% end %}
+                                </div>
+
+                                <div class="form-group margin--element_top_xs">
+                                    <label>Description:(Optional)</label>
+                                    <div>
+                                        <textarea class="box--full_width" rows="10" id="desc" name="desc">{% if 'desc' in deal %}{{ deal['desc'] }}{% end %}
+                                        </textarea>
+                                    </div>
+                                </div>
+                        </div>
+
+    <!-- /////////////////////////////////////////////////////////// -->
+                        <div class="col-md-7">
+                            <h1>Deeplink info</h1>
+                            <div class="form-group margin--element_top_xs">
+                                <label>Show discounted products only?</label>
+                                <div class="radio">
+                                    <label>
+                                    {% if 'discount' in deal and deal['discount'] == '1' %}
+                                        <input type="radio" name="discount" id="yes" value="1" checked>Yes
+                                    {% else %}
+                                        <input type="radio" name="discount" id="yes" value="1">Yes
+                                    {% end %}
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                    {% if 'discount' in deal and deal['discount'] == '1' %}
+                                        <input type="radio" name="discount" id="no" value="0">No
+                                    {% else %}
+                                        <input type="radio" name="discount" id="no" value="0" checked>No
+                                    {% end %}
+                                    </label>
+                                </div>
+                             </div>
+
+                            <div class="form-group margin--element_top_xs">
+                                <label>Categories</label>
+                                <select class="form-control" name="cid" id="cid">
+                                    {% for category in categories %}
+                                        {% if 'cid' in deal %}
+                                            {% if deal['cid']==category['id'] %}
+                                                {% module CategoryRowModule(category, 1) %}
+                                            {% else %}
+                                                {% module CategoryRowModule(category, 0) %}
+                                            {% end %}
+                                        {% else %}
+                                            {% module CategoryRowModule(category, 0) %}
+                                        {% end %}
+                                    {% end %}
+                                </select>
+                            </div>
+
+                            <div class="form-group margin--element_top_xs">
+                                <label>Merchants</label>
+                                <div class="row">
+                                    {% for merchant in merchants %}
+                                        {% if 'merchants' in deal and merchant['id'] in deal['merchants'] %}
+                                            {% module MerchantRowModule(merchant, 1) %}
+                                        {% else %}
+                                            {% module MerchantRowModule(merchant, 0) %}
+                                        {% end %}
+                                    {% end %}
+                                </div>
+                            </div>
+
+                            <div class="form-group margin--element_top_xs">
+                                <label>Brands</label>
+                                <div class="row">
+                                    {% for brand in brands %}
+                                        {% if 'brands' in deal and brand['id'] in deal['brands'] %}
+                                            {% module BrandRowModule(brand, 1) %}
+                                        {% else %}
+                                            {% module BrandRowModule(brand, 0) %}
+                                        {% end %}
+                                    {% end %}
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8 col-md-9 col-lg-10">
+                            <!-- <p class="txt--lg" id="msg--post_success">The post is successfully submitted!</p> -->
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 ">
+                            <input type="submit" class="btn btn-default btn--primary" id="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+{% end %}

@@ -1,0 +1,5 @@
+{% if checked %}
+    <option value="{{ category['id'] }}" selected="selected">{{ category['displayTerm'] }}</option>
+{% else %}
+    <option value="{{ category['id'] }}" >{{ category['displayTerm'] }}</option>
+{% end %}

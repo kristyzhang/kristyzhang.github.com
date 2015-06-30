@@ -1,0 +1,385 @@
+/*************************************************
+**************************************************
+
+Website Name: 5th Avenue
+Website URL: borderxlab.com
+Website Author: Aaron Cheng
+Author URL: chengfolio.com
+Copyright 2014. All Rights Reserved.
+
+Color Guide
+***************
+F6F6F6 - Light Gray
+808a97 - Blue Gray(For text)
+1377CC - Blue
+
+*************************************************/
+
+/************************************************
+*************************************************
+0. CSS Reset -------------------- All Files
+1. General Styles ---------------------- All Files
+2. Banner Styles -------------------- All Files
+3. Body Styles ---------------------- All Files
+
+*************************************************
+************************************************/
+
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+/*body  {
+  font-family: "Open Sans", Microsoft YaHei, Helvetica, Arial, sans-serif, STHeiti;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  color: #808a97;
+}*/
+
+/*p {
+  margin: 0;
+}
+
+ul,ol,li{
+	list-style-type: none;
+	padding:0;
+}*/
+
+/*h1, h2, h3, h4, h5, h6{
+	font-family: "Open Sans", Microsoft YaHei, Helvetica, Arial, sans-serif, STHeiti;
+	font-weight:300;
+	font-size: 14px;
+	margin: 0;
+}*/
+
+/*a{
+	color: #808a97;
+}
+
+a:hover, a:focus{
+	color: #808a97;
+	text-decoration: none;
+}*/
+
+/*----------------------------------------------
+------------------------------------------------
+1. Text Styles
+------------------------------------------------
+----------------------------------------------*/
+.txt--highlight{
+	color: #0093CD;
+}
+
+.txt--bold{
+	font-weight: bold;
+}
+
+.txt--bullet_list{
+	list-style-type: disc;
+	list-style-position:outside;
+}
+
+.txt--bullet_list > li{
+	list-style-type: disc;
+	list-style-position:outside;
+}
+
+.txt--number_list{
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
+.txt--number_list > li{
+	list-style-type: decimal;
+	list-style-position:outside;
+}
+
+.txt--xl{
+	font-size: 24px;
+	line-height: 36px;
+}
+
+.txt--lg{
+	font-size: 18px;
+	line-height: 36px;
+}
+
+.txt--md{
+	font-size: 15px;
+}
+
+.txt--sm{
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.txt--title{
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 300;
+	color: #000;
+	text-align: center;
+}
+
+.txt--primary_on_dark{
+	color: #FFF;
+}
+
+.txt--primary_on_light{
+	color: #000;
+}
+
+.circle--number {
+background-color: #3E3E3E;
+width: 28px;
+height: 28px;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-khtml-border-radius: 50%;
+border-radius: 50%;
+font-size: 18px;
+color: #fff;
+text-align: center;
+line-height: 28px;
+}
+/*----------------------------------------------
+------------------------------------------------
+2. Image Styles
+------------------------------------------------
+----------------------------------------------*/
+.img--full_width{
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*----------------------------------------------
+------------------------------------------------
+3. Shape Styles
+------------------------------------------------
+----------------------------------------------*/
+.box{
+	display: block;
+}
+
+.box--primary{
+	background-color: #000;
+}
+
+.box--secondary{
+	background-color: #F6F6F6;
+}
+
+.box--under_hero{
+	position: relative;
+	top: -60px;
+	margin-bottom: -40px;
+}
+
+.box--full_width{
+	width: 100%;
+}
+
+.box--primary-bar{
+	background-color: #F6F6F6;
+	height: 60px;	
+}
+
+.box--share-wechat{
+	background-color: #323232;
+	height: 60px;	
+}
+
+.box--share-curation{
+	background-color: #F8F8F8;
+	height: 60px;	
+}
+
+.divider--horizontal{
+	border-bottom: 1px solid #808a97;
+	border-left: 26px transparent solid;
+	border-right: 26px transparent solid;
+	border-top-width: 0;
+	width: 100%;
+}
+
+.divider--horizontal_even{
+	height: 2px;
+}
+
+.divider--horizontal_even_thin{
+	height: 1px;
+	background-color: #B9BBC5;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+4. Spacing Styles
+------------------------------------------------
+----------------------------------------------*/
+.margin--section_top{
+	margin-top: 120px;
+}
+
+.margin--section_bottom{
+	margin-bottom: 120px;
+}
+
+.margin--element_top_lg{
+	margin-top: 120px;
+}
+
+.margin--element_top{
+	margin-top: 70px;
+}
+
+.margin--element_top_sm{
+	margin-top: 40px;
+}
+
+.margin--element_top_xs{
+	margin-top: 20px;
+}
+
+.margin--element_top_xxs{
+	margin-top: 10px;
+}
+
+.margin--element_bottom_lg{
+	margin-bottom: 120px;
+}
+
+.margin--element_bottom{
+	margin-bottom: 70px;
+}
+
+.margin--element_bottom_sm{
+	margin-bottom: 40px;
+}
+
+.margin--element_bottom_xs{
+	margin-bottom: 20px;
+}
+
+.margin--element_left_xs{
+	margin-left: 10px;
+}
+
+.padding--element_lg{
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.padding--element_md{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.padding--element_sm{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.padding--element_xs{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.padding--txt_box{
+	padding: 40px;
+}
+
+.shift--up_xl{
+	position: relative;
+	top: -280px;
+}
+
+.shift--up_lg{
+	position: relative;
+	top: -120px;
+}
+
+.shift--up{
+	position: relative;
+	top: -80px;
+}
+
+.move--up_xl{
+	margin-top: -180px;
+}
+
+.move--up_lg{
+	margin-top: -120px;
+}
+
+.move--up{
+	margin-top: -70px;
+}
+/*----------------------------------------------
+------------------------------------------------
+5. Button Styles
+------------------------------------------------
+----------------------------------------------*/
+.btn{
+	border-width: 0;
+	display: block;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.btn--primary{
+	width: 100%;
+	color: #fff;
+	background-color: #1377CC;
+	height: 30px;
+	line-height: 30px;
+}
+
+.btn--primary-white{
+	background-color: #fff;
+	color:#000;
+}
+
+.btn__menu_expand{
+	margin-top: 13px;
+}
+
+.btn:hover, .btn:focus{
+	color:#fff;
+	opacity: 0.8;
+}
+
+.btn--primary:hover, .btn--primary:focus{
+	background-color: #1377CC;
+}
+
+.btn--lg{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+6. admin tool
+------------------------------------------------
+----------------------------------------------*/
+.checkbox+.checkbox {
+  margin-top: 10px;
+}
+
+#msg--post_success{
+	display: none;
+}
+
+.navbar-nav>.active>a{
+	background-color: #efeff4;
+}

@@ -1,0 +1,37 @@
+        <div class="container">
+			<div class="row">
+				<!-- link change-->
+				{% if '.html' in deal['custom_url'] %}
+				<a href="{{ static_url(deal['custom_url']) }}" >
+				{% else %}
+				<a href="" onclick="goDeepLinkPLP('{{ deal['custom_url'] }}')">
+				{% end %}
+					<div class="home__img_wrapper">
+						<!-- hero img change-->
+						<img src="{{ static_url('contents/' + deal['id'] + '/' +  deal['image']) }}" class="img-responsive" alt="product image">
+						<img src="{{ static_url("images/icon_arrow.png") }}" class="icon_arrow" alt="arrow image">
+					</div>
+				</a>
+			</div>
+
+			<div class="row curation_home__info">
+				<div class="col-xs-12">
+					<!-- link change-->
+					<a class="pull-left" href="" onclick="goDeepLinkPLP('{{ deal['custom_url'] }}')">
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- date change-->
+								<div class="pull-left curation__date">{{ deal['date'] }}</div>
+								<!-- title change-->
+								<p class="txt--primary_on_light pull-left">{{ deal['title'] }}</p>
+							</div>
+						</div>
+					</a>
+					<!-- share btn change-->
+					<div class="pull-right curation_home__share" onclick="goShareLink('{{ deal['share_link'] }}')">
+						<div class="icon--share img--cover pull-right" style="background-image: url({{ static_url("images/icon_share.png") }});"></div>
+						<p class="curation_home__icon_share_label pull-right">分享</p>	
+					</div>					
+				</div>
+			</div>
+		</div>
