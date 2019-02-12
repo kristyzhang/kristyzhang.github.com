@@ -1,0 +1,97 @@
+header h1{
+	font-family: Edwardian Script ITC, Snell Roundhand;
+	font-size: 300%;
+	color: grey;
+	text-align: center;
+}
+
+body{
+	background:;
+	font-family: agaramondpro, avenir;
+	color: grey;
+	font-size: 100%;
+}
+
+.container{
+	margin: 7%;
+}
+
+.column{
+	padding: 6px 0px;
+	background: #999;
+	border-radius: 20px;
+	color: white;
+	text-align: center;
+	float: left;
+	margin: 1% 3%;
+	width: 27.3%;
+}
+
+.row:after{
+	clear: both;
+}
+
+
+img{
+	border-radius: 10px;
+	float: left;
+	margin: 3%;
+	width: 27.3%;
+}
+
+#fish:hover{
+	content: url('img/fish.gif');
+}
+
+#egg:hover{
+	content: url('img/egg.gif');
+}
+
+#cake:hover{
+	content: url('img/cake.gif');
+}
+
+#fish2:hover{
+	content: url('img/fish2.gif');
+}
+
+#egg2:hover{
+	content: url('img/egg2.gif');
+}
+
+#cake2:hover{
+	content: url('img/cake2.gif');
+}
+
+table{
+	border-collapse: collapse;
+	border: 1px solid grey;
+}
+
+.table{
+	float: left;
+	text-align: center;
+	color: grey;
+	font-size: 70%;
+	table-layout: auto;
+	margin: 1% 3%;
+	width: 27.3%;
+	border-spacing: 0;
+
+}
+
+th,td{
+	border:1px solid grey;
+}
+
+table tr td a{
+	color: grey;
+	text-decoration: none;
+}
+
+ol{
+	float: left;
+	font-size: 90%;
+	margin: 1.25%;
+	width: 27.3%;
+}
